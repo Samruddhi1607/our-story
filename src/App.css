@@ -1,0 +1,2418 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --dark: #171313;
+  --dark2: #211a1a;
+  --cream: #f8f0e7;
+  --gold: #c9a96e;
+  --soft: #d8bfb5;
+  --white: #fffaf5;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--dark);
+  color: var(--cream);
+}
+
+.website {
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: rgba(23, 19, 19, 0.9);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.section {
+  min-height: 100vh;
+  padding: 120px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201,169,110,0.1), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(216,191,181,0.08), transparent 25%);
+}
+
+.small-heading,
+.section-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(60px, 9vw, 120px);
+  line-height: 0.9;
+  font-weight: 500;
+  max-width: 1000px;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero-text {
+  max-width: 550px;
+  margin: 35px 0;
+  color: var(--soft);
+  font-size: 16px;
+}
+
+.main-button,
+.letter-button,
+.surprise-button {
+  padding: 16px 32px;
+  border: 1px solid var(--gold);
+  color: var(--cream);
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.4s;
+}
+
+.main-button:hover,
+.letter-button:hover,
+.surprise-button:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+.floating-heart {
+  position: absolute;
+  color: var(--gold);
+  font-size: 60px;
+  opacity: 0.2;
+  animation: float 5s ease-in-out infinite;
+}
+
+.heart1 {
+  top: 25%;
+  left: 12%;
+}
+
+.heart2 {
+  top: 55%;
+  right: 12%;
+  animation-delay: 1s;
+}
+
+.heart3 {
+  bottom: 12%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(10deg);
+  }
+}
+
+.story-section,
+.love-section,
+.future-section,
+.letter-section {
+  background: var(--dark2);
+}
+
+.section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(50px, 7vw, 85px);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-intro {
+  color: var(--soft);
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.8;
+  margin-bottom: 60px;
+}
+
+.timeline {
+  width: min(800px, 100%);
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+/* ========================================
+   FIRST MEETING - CHAT STORY
+======================================== */
+
+.first-meeting {
+  overflow: hidden;
+}
+
+.first-meeting .story-intro {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Chat platform title */
+
+.chat-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 30px;
+  margin-bottom: 15px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.instagram-title {
+  color: #d8bfb5;
+}
+
+.whatsapp-title {
+  color: #d8bfb5;
+}
+
+/* Chat rows */
+
+.chat-row {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.chat-row.left {
+  justify-content: flex-start;
+}
+
+.chat-row.right {
+  justify-content: flex-end;
+}
+
+/* Message bubbles */
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 15px 18px;
+
+  background: rgba(201, 169, 110, 0.10);
+
+  border: 1px solid rgba(201, 169, 110, 0.25);
+
+  border-radius: 4px 18px 18px 18px;
+
+  animation: messageAppear 0.8s ease forwards;
+}
+
+.chat-bubble p {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.chat-bubble small {
+  display: block;
+  margin-top: 8px;
+
+  color: #9d8b83;
+  font-size: 10px;
+
+  text-align: right;
+}
+
+/* WhatsApp style */
+
+.whatsapp-bubble {
+  background: rgba(201, 169, 110, 0.14);
+
+  border-radius: 18px 4px 18px 18px;
+}
+
+/* Your reaction */
+
+.story-reaction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 25px 0;
+
+  padding: 12px 15px;
+
+  border-left: 2px solid var(--gold);
+
+  color: var(--soft);
+
+  font-size: 13px;
+}
+
+.story-reaction strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* Story paragraphs */
+
+.story-text {
+  color: var(--soft);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Ending */
+
+.story-ending {
+  margin-top: 40px;
+  padding-top: 30px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.story-ending p {
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.story-ending h4 {
+  margin-top: 12px;
+
+  color: var(--gold);
+
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+/* Message animation */
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .chat-bubble {
+    max-width: 90%;
+  }
+
+  .chat-bubble p {
+    font-size: 18px;
+  }
+
+  .story-ending p {
+    font-size: 19px;
+  }
+
+}
+
+/* =========================
+   FAMILY SAID YES
+========================= */
+
+.family-story {
+  overflow: hidden;
+}
+
+.family-story h4 {
+  margin-top: 8px;
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.special-date {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 30px 0;
+  padding: 18px 20px;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  background: rgba(201, 169, 110, 0.08);
+}
+
+.date-icon {
+  font-size: 28px;
+}
+
+.special-date small {
+  display: block;
+  color: #9d8b83;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.special-date strong {
+  display: block;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.arranged-love {
+  margin: 35px 0;
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.arranged-love p {
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.arranged-love h4 {
+  margin-top: 12px;
+  color: var(--gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+
+.chapter-ending {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.chapter-ending p {
+  margin: 5px 0;
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.chapter-ending p:last-child {
+  color: var(--gold);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .special-date {
+    padding: 15px;
+  }
+
+  .special-date strong {
+    font-size: 21px;
+  }
+
+  .arranged-love p {
+    font-size: 19px;
+  }
+
+  .chapter-ending p {
+    font-size: 18px;
+  }
+}
+/* =========================
+   WE BECAME OFFICIAL
+========================= */
+
+.official-story,
+.wedding-story {
+  overflow: hidden;
+}
+
+.official-story h4,
+.wedding-story h4 {
+  margin-top: 8px;
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.official-moment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 22px 25px;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  background: rgba(201, 169, 110, 0.08);
+  text-align: center;
+}
+
+.official-moment span {
+  font-size: 24px;
+}
+
+.official-moment small {
+  display: block;
+  color: #9d8b83;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+
+.official-moment strong {
+  color: var(--gold);
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   FUTURE WEDDING
+========================= */
+
+.countdown-card {
+  margin: 30px 0;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  background: rgba(201, 169, 110, 0.07);
+}
+
+.countdown-card span {
+  display: block;
+  color: #9d8b83;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.countdown-card strong {
+  display: block;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  letter-spacing: 5px;
+}
+
+.countdown-card small {
+  display: block;
+  margin-top: 8px;
+  color: var(--soft);
+  font-size: 12px;
+}
+
+.future-love {
+  margin-top: 35px;
+  padding: 25px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+.future-love p {
+  color: var(--soft);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.future-love h4 {
+  margin-top: 12px;
+  color: var(--gold);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .official-moment {
+    padding: 18px 12px;
+  }
+
+  .official-moment strong {
+    font-size: 12px;
+  }
+
+  .countdown-card strong {
+    font-size: 27px;
+    letter-spacing: 3px;
+  }
+
+  .future-love p {
+    font-size: 19px;
+  }
+}
+.timeline-item {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 45px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 7px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  background: var(--dark2);
+}
+
+.timeline-card {
+  border: 1px solid rgba(201, 169, 110, 0.25);
+  padding: 30px;
+  transition: 0.3s;
+}
+
+.timeline-card:hover {
+  transform: translateX(8px);
+  border-color: var(--gold);
+}
+
+.timeline-card span {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.timeline-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.timeline-card p {
+  color: var(--soft);
+  line-height: 1.8;
+}
+
+.memories-section {
+  background: var(--dark);
+}
+
+.memory-grid {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.memory-card {
+  background: #211b1b;
+  border: 1px solid rgba(201,169,110,0.2);
+  transition: 0.4s;
+}
+
+.memory-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold);
+}
+
+/* Real photos inside memory boxes */
+.photo-placeholder {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark2);
+}
+
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.memory-content {
+  padding: 22px;
+}
+
+.memory-content h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.memory-content p {
+  color: var(--soft);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.photo-note {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.love-grid {
+  max-width: 1100px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.love-card {
+  min-height: 190px;
+  padding: 30px;
+  border: 1px solid rgba(201,169,110,0.25);
+  position: relative;
+  transition: 0.4s;
+}
+
+.love-card:hover {
+  background: rgba(201,169,110,0.08);
+  transform: translateY(-5px);
+}
+
+.love-number {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.love-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.love-card span {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.gifts-section {
+  background: var(--dark);
+}
+
+.gift-grid {
+  max-width: 1050px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.gift-card {
+  text-align: center;
+  padding: 45px 30px;
+  border: 1px solid rgba(201,169,110,0.3);
+  transition: 0.4s;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+}
+
+.gift-icon {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.gift-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+}
+
+.gift-card p {
+  color: var(--soft);
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 15px 0 25px;
+}
+
+.gift-card button {
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 10px 22px;
+  cursor: pointer;
+}
+.future-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.future-item {
+  width: 100%;
+}
+.future-item {
+  text-align: center;
+  padding: 35px 20px;
+  border-bottom: 1px solid var(--gold);
+}
+
+.future-item span {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+.future-item h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.future-item p {
+  color: var(--soft);
+  font-size: 13px;
+}
+
+.future-quote {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.future-quote p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.future-quote strong {
+  color: var(--gold);
+}
+@media (max-width: 900px) {
+  .future-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .future-box {
+    grid-template-columns: 1fr;
+  }
+}
+.letter-section {
+  text-align: center;
+}
+
+/* =================================
+   ROMANTIC LETTER SECTION
+================================= */
+
+.letter-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 700px;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      rgba(201, 169, 110, 0.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      var(--dark),
+      #130f0f
+    );
+}
+
+
+/* =================================
+   BEFORE OPENING
+================================= */
+
+.letter-opening {
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.opening-small {
+  color: #9d8b83;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.letter-opening h3 {
+  color: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.opening-hint {
+  margin-top: 30px;
+  color: #9d8b83;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* =================================
+   BIG HEART OPEN BUTTON
+================================= */
+
+.heart-open {
+  position: relative;
+
+  width: 105px;
+  height: 105px;
+
+  margin: 25px 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation: heartFloat 2.5s ease-in-out infinite;
+}
+
+
+/* glow */
+
+.heart-open::before {
+  content: "";
+
+  position: absolute;
+
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+
+  background: rgba(201, 169, 110, 0.10);
+
+  box-shadow:
+    0 0 25px rgba(201, 169, 110, 0.15),
+    0 0 60px rgba(201, 169, 110, 0.08);
+
+  animation: heartGlow 2s ease-in-out infinite;
+}
+
+
+/* actual heart */
+
+.heart-open span {
+  position: relative;
+  z-index: 2;
+
+  color: var(--gold);
+
+  font-size: 75px;
+
+  line-height: 1;
+
+  text-shadow:
+    0 0 10px rgba(201, 169, 110, 0.5),
+    0 0 30px rgba(201, 169, 110, 0.3);
+
+  transition: 0.4s ease;
+}
+
+.heart-open:hover span {
+  transform: scale(1.15);
+}
+
+.opening-bottom {
+  color: #9d8b83;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+
+/* =================================
+   LETTER WRAPPER
+================================= */
+
+.letter-wrapper {
+  position: relative;
+
+  max-width: 750px;
+
+  margin: 50px auto 0;
+}
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+.heart-burst span {
+  position: absolute;
+
+  color: var(--gold);
+
+  opacity: 0;
+
+  animation: burstHeart 1.8s ease forwards;
+}
+
+.heart-burst span:nth-child(1) {
+  left: 10%;
+  top: 5%;
+  font-size: 20px;
+  animation-delay: .1s;
+}
+
+.heart-burst span:nth-child(2) {
+  right: 12%;
+  top: 10%;
+  font-size: 15px;
+  animation-delay: .3s;
+}
+
+.heart-burst span:nth-child(3) {
+  left: 3%;
+  top: 40%;
+  font-size: 14px;
+  animation-delay: .5s;
+}
+
+.heart-burst span:nth-child(4) {
+  right: 4%;
+  top: 45%;
+  font-size: 20px;
+  animation-delay: .7s;
+}
+
+.heart-burst span:nth-child(5) {
+  left: 18%;
+  bottom: 5%;
+  font-size: 13px;
+  animation-delay: .9s;
+}
+
+
+/* =================================
+   LETTER PAPER
+================================= */
+
+.letter-paper {
+  position: relative;
+
+  padding: 55px 65px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf0,
+      #eee0c9
+    );
+
+  color: #3c3029;
+
+  border: 1px solid rgba(201, 169, 110, 0.7);
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(201, 169, 110, 0.08);
+
+  animation: letterAppear 1s ease forwards;
+}
+
+
+/* top heart */
+
+.letter-top-heart {
+  text-align: center;
+
+  color: #9c7545;
+
+  font-size: 22px;
+
+  margin-bottom: 15px;
+}
+
+
+/* date */
+
+.letter-date {
+  text-align: center;
+
+  color: #9d8060;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+
+/* heading */
+
+.letter-paper h3 {
+  text-align: center;
+
+  color: #76583c;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  margin: 15px 0 15px;
+}
+
+
+/* decorative line */
+
+.letter-line {
+  text-align: center;
+
+  color: #b18b59;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 5px;
+}
+
+
+/* text */
+
+.letter-paper > p {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  line-height: 1.8;
+
+  margin-bottom: 20px;
+}
+
+
+/* =================================
+   BIRTHDAY WISH
+================================= */
+
+.birthday-wish {
+  margin: 35px 0;
+
+  padding: 28px 25px;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(126, 96, 64, 0.25);
+
+  border-bottom: 1px solid rgba(126, 96, 64, 0.25);
+}
+
+.birthday-wish span {
+  font-size: 32px;
+}
+
+.birthday-wish p {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+
+  color: #6d594b;
+}
+
+.birthday-wish strong {
+  display: block;
+
+  margin-top: 12px;
+
+  color: #87643e;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+}
+
+
+/* =================================
+   FOREVER MESSAGE
+================================= */
+
+.forever-message {
+  margin: 35px 0;
+
+  padding: 25px;
+
+  text-align: center;
+
+  background: rgba(126, 96, 64, 0.06);
+
+  border: 1px solid rgba(126, 96, 64, 0.15);
+}
+
+.forever-message p {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 20px;
+
+  font-style: italic;
+
+  color: #6d594b;
+}
+
+.forever-message strong {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #87643e;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 22px;
+}
+
+
+/* =================================
+   SIGNATURE
+================================= */
+
+.signature {
+  text-align: right;
+
+  color: #76583c;
+
+  font-style: italic;
+}
+
+
+/* =================================
+   HEART CLOSE BUTTON
+================================= */
+
+.heart-close {
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+
+  margin: 35px auto 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+
+/* heart shape */
+
+.heart-close span {
+  color: #9c7545;
+
+  font-size: 55px;
+
+  line-height: 1;
+
+  transition: 0.3s ease;
+}
+
+.heart-close small {
+  position: absolute;
+
+  color: #fffaf0;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+
+  top: 31px;
+}
+
+.heart-close:hover span {
+  transform: scale(1.15);
+}
+
+
+/* =================================
+   ANIMATIONS
+================================= */
+
+@keyframes heartFloat {
+
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+}
+
+@keyframes heartGlow {
+
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+}
+
+@keyframes letterAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+}
+
+@keyframes burstHeart {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+    transform: scale(1) translateY(-20px);
+  }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .letter-opening h3 {
+    font-size: 26px;
+  }
+
+  .letter-paper {
+    padding: 40px 25px;
+  }
+
+  .letter-paper h3 {
+    font-size: 31px;
+  }
+
+  .letter-paper > p {
+    font-size: 18px;
+  }
+
+  .birthday-wish p {
+    font-size: 18px;
+  }
+
+}
+.signature {
+  text-align: right;
+  font-style: italic;
+}
+
+/* =====================================================
+   FINAL SURPRISE SECTION
+===================================================== */
+
+.surprise-section {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(212, 175, 55, 0.08),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.03),
+      transparent 30%
+    ),
+    var(--dark);
+
+  padding: 100px 20px;
+}
+
+
+/* =====================================================
+   START SCREEN
+===================================================== */
+
+.surprise-start {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+
+  animation: surpriseFadeIn 1s ease;
+}
+
+.surprise-start h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--cream);
+  margin: 15px 0;
+}
+
+.surprise-intro {
+  color: var(--soft);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.surprise-small {
+  color: var(--gold);
+  margin-top: 30px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   BALLOON
+===================================================== */
+
+.surprise-balloon {
+  border: none;
+  background: transparent;
+
+  font-size: 7rem;
+
+  cursor: pointer;
+
+  margin: 35px auto 10px;
+
+  display: block;
+
+  animation: balloonFloat 2.5s ease-in-out infinite;
+
+  transition: transform 0.3s ease;
+}
+
+.surprise-balloon:hover {
+  transform: scale(1.15);
+}
+
+.surprise-balloon:active {
+  transform: scale(0.85);
+}
+
+.touch-balloon {
+  color: var(--soft);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   SURPRISE REVEAL
+===================================================== */
+
+.surprise-reveal {
+  width: 100%;
+  max-width: 1000px;
+
+  margin: auto;
+
+  animation: revealPage 1s ease;
+}
+
+
+/* =====================================================
+   BALLOON BURST HEARTS
+===================================================== */
+
+.balloon-burst {
+  position: relative;
+
+  height: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  margin-bottom: 20px;
+}
+
+.balloon-burst span {
+  font-size: 1.7rem;
+
+  animation: burstHeart 2.5s ease-out infinite;
+}
+
+.balloon-burst span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.balloon-burst span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.balloon-burst span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.balloon-burst span:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.balloon-burst span:nth-child(5) {
+  animation-delay: 0.9s;
+}
+
+.balloon-burst span:nth-child(6) {
+  animation-delay: 1.1s;
+}
+
+
+/* =====================================================
+   EMOTIONAL MESSAGE
+===================================================== */
+
+.emotional-message {
+  max-width: 700px;
+
+  margin: 0 auto 50px;
+
+  padding: 20px;
+
+  animation: fadeUp 1.2s ease;
+}
+
+.surprise-label {
+  color: var(--gold);
+
+  font-size: 0.8rem;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 15px;
+}
+
+.emotional-message h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  color: var(--cream);
+
+  margin-bottom: 25px;
+}
+
+.emotional-message p {
+  color: var(--soft);
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  margin: 15px 0;
+}
+
+.emotional-message strong {
+  color: var(--cream);
+}
+
+.emotional-line {
+  color: var(--gold) !important;
+
+  font-style: italic;
+
+  margin-top: 30px !important;
+}
+
+
+/* =====================================================
+   READY BOX
+===================================================== */
+
+.ready-box {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 35px 25px;
+
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+
+  animation: fadeUp 1.4s ease;
+}
+
+.ready-box > p {
+  color: var(--soft);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+.ready-box h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.8rem;
+
+  color: var(--cream);
+
+  line-height: 1.5;
+
+  margin: 15px 0 30px;
+}
+
+
+/* =====================================================
+   YES / NO BUTTONS
+===================================================== */
+
+.ready-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.yes-button,
+.no-button {
+  border-radius: 50px;
+
+  padding: 13px 25px;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.yes-button {
+  border: 1px solid var(--gold);
+
+  background: var(--gold);
+
+  color: #171313;
+
+  font-weight: 600;
+}
+
+.yes-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(212, 175, 55, 0.25);
+}
+
+.no-button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: transparent;
+
+  color: var(--soft);
+}
+
+.no-button:hover {
+  transform: translateY(-3px);
+
+  border-color: var(--gold);
+
+  color: var(--cream);
+}
+
+
+/* =====================================================
+   YES → DON'T GET EMOTIONAL
+===================================================== */
+
+.journey-reveal {
+  width: 100%;
+
+  margin-top: 60px;
+
+  animation: fadeUp 1s ease;
+}
+
+.dont-cry {
+  max-width: 500px;
+
+  margin: 0 auto 30px;
+
+  padding: 25px 20px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      rgba(212, 175, 55, 0.04)
+    );
+
+  border: 1px solid rgba(212, 175, 55, 0.2);
+
+  animation: messageAppear 1.2s ease;
+}
+
+.message-icon {
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+}
+
+.dont-cry p {
+  color: var(--soft);
+
+  margin: 5px 0;
+}
+
+.dont-cry strong {
+  display: block;
+
+  color: var(--cream);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.7rem;
+
+  margin: 8px 0;
+}
+
+.dont-cry small {
+  display: block;
+
+  color: var(--soft);
+
+  margin-top: 8px;
+
+  font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   JOURNEY IMAGE
+   SMALLER + SLOW APPEAR
+===================================================== */
+
+.life-journey-image {
+  width: 65%;
+
+  max-width: 620px;
+
+  margin: 35px auto 0;
+
+  opacity: 0;
+
+  transform:
+    translateY(35px)
+    scale(0.94);
+
+  animation:
+    journeyPhotoAppear 2.5s ease forwards;
+
+  animation-delay: 1.1s;
+}
+
+.life-journey-image img {
+  width: 100%;
+
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(212, 175, 55, 0.35);
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =====================================================
+   JOURNEY CAPTION
+===================================================== */
+
+.journey-caption {
+  max-width: 650px;
+
+  margin: 35px auto;
+
+  opacity: 0;
+
+  animation: fadeUp 1.5s ease forwards;
+
+  animation-delay: 3s;
+}
+
+.journey-caption p {
+  color: var(--soft);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  margin: 8px 0;
+}
+
+.journey-caption h3 {
+  color: var(--gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2rem;
+
+  margin-top: 20px;
+}
+
+
+/* =====================================================
+   FINAL LOVE MESSAGE
+===================================================== */
+
+.final-love {
+  max-width: 700px;
+
+  margin: 80px auto 0;
+
+  padding: 50px 25px;
+
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+
+  opacity: 0;
+
+  animation: fadeUp 1.5s ease forwards;
+
+  animation-delay: 3.8s;
+}
+
+.big-heart {
+  font-size: 4rem;
+
+  color: var(--gold);
+
+  animation: heartBeat 1.8s ease-in-out infinite;
+
+  margin-bottom: 15px;
+}
+
+.final-love h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  color: var(--cream);
+
+  margin-bottom: 25px;
+}
+
+.final-love p {
+  color: var(--soft);
+
+  line-height: 1.8;
+
+  margin: 10px 0;
+}
+
+.final-love h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--gold);
+
+  font-size: 1.5rem;
+
+  line-height: 1.6;
+
+  margin-top: 30px;
+}
+
+.forever {
+  margin-top: 35px;
+
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  border: 1px solid rgba(212, 175, 55, 0.4);
+
+  border-radius: 50px;
+
+  color: var(--gold);
+
+  letter-spacing: 2px;
+
+  font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   NOT YET MESSAGE
+===================================================== */
+
+.not-ready {
+  max-width: 550px;
+
+  margin: 50px auto 0;
+
+  padding: 35px 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  border: 1px solid rgba(212, 175, 55, 0.2);
+
+  animation: notReadyAppear 0.8s ease;
+}
+
+.not-ready-heart {
+  font-size: 2.5rem;
+
+  margin-bottom: 10px;
+}
+
+.not-ready h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--cream);
+
+  font-size: 2rem;
+
+  margin-bottom: 15px;
+}
+
+.not-ready p {
+  color: var(--soft);
+
+  line-height: 1.8;
+}
+
+.not-ready strong {
+  display: block;
+
+  color: var(--gold);
+
+  line-height: 1.8;
+
+  margin-top: 15px;
+}
+
+.try-again {
+  margin-top: 25px;
+
+  padding: 12px 25px;
+
+  border-radius: 50px;
+
+  border: 1px solid var(--gold);
+
+  background: transparent;
+
+  color: var(--gold);
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.try-again:hover {
+  background: var(--gold);
+
+  color: var(--dark);
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes surpriseFadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes balloonFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+
+@keyframes softPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes revealPage {
+  from {
+    opacity: 0;
+
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+
+@keyframes burstHeart {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.5);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.3;
+
+    transform:
+      translateY(-25px)
+      scale(1);
+  }
+}
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes journeyPhotoAppear {
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.94);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes notReadyAppear {
+  from {
+    opacity: 0;
+
+    transform: scale(0.95)
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1)
+      translateY(0);
+  }
+}
+
+
+@keyframes heartBeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .surprise-section {
+    padding: 80px 15px;
+  }
+
+  .surprise-balloon {
+    font-size: 5.5rem;
+  }
+
+  .emotional-message {
+    padding: 10px;
+  }
+
+  .emotional-message p {
+    font-size: 0.95rem;
+  }
+
+  .ready-box {
+    padding: 30px 18px;
+  }
+
+  .ready-box h3 {
+    font-size: 1.5rem;
+  }
+
+  .ready-buttons {
+    flex-direction: column;
+  }
+
+  .yes-button,
+  .no-button {
+    width: 100%;
+
+    max-width: 280px;
+  }
+
+  .life-journey-image {
+    width: 88%;
+
+    max-width: 500px;
+  }
+
+  .journey-caption {
+    padding: 0 10px;
+  }
+
+  .journey-caption p {
+    font-size: 0.9rem;
+  }
+
+  .final-love {
+    padding: 40px 15px;
+  }
+
+  .final-love h2 {
+    font-size: 2.5rem;
+  }
+
+  .forever {
+    font-size: 0.7rem;
+
+    padding: 10px 18px;
+  }
+
+}
+
+/* =========================
+   ROMANTIC FOOTER
+========================= */
+
+.romantic-footer {
+  text-align: center;
+  padding: 90px 20px 50px;
+
+  background: var(--dark);
+
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+
+  position: relative;
+}
+
+.footer-heart {
+  font-size: 2.5rem;
+  color: var(--gold);
+
+  margin-bottom: 15px;
+
+  animation: heartBeat 2s ease-in-out infinite;
+}
+
+.romantic-footer h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 2.2rem;
+
+  color: var(--cream);
+
+  margin-bottom: 15px;
+}
+
+.romantic-footer p {
+  color: var(--soft);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+
+  margin-bottom: 30px;
+}
+
+.footer-line {
+  width: 80px;
+  height: 1px;
+
+  background: var(--gold);
+
+  margin: 0 auto 25px;
+
+  opacity: 0.5;
+}
+
+.romantic-footer span {
+  display: block;
+
+  color: var(--gold);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 1.2rem;
+
+  font-style: italic;
+
+  margin-bottom: 8px;
+}
+
+.romantic-footer small {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .nav-links {
+    display: none;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+
+  .section {
+    padding: 100px 6%;
+  }
+
+  .hero h1 {
+    font-size: 65px;
+  }
+
+  .memory-grid,
+  .love-grid,
+  .gift-grid,
+  .future-box {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-placeholder {
+    height: 250px;
+  }
+
+  .letter-paper {
+    padding: 30px;
+  }
+
+  .future-quote p {
+    font-size: 28px;
+  }
+}
